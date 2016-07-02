@@ -105,7 +105,7 @@ class JSSDK {
     return trim(substr(file_get_contents($filename), 15));
   }
   private function set_php_file($filename, $content) {
-    $fp = fopen($filename, "w");
+    $fp = fopen($filename, "rw");
     fwrite($fp, "<?php exit();?>" . $content);
     fclose($fp);
   }
